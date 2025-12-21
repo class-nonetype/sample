@@ -27,6 +27,3 @@ async def tickets_web_socket(websocket: WebSocket, room: str):
     except WebSocketDisconnect:
         connections[room].discard(websocket)
 
-# Ejemplo de uso en tu lógica cuando cambia un ticket:
-# await broadcast(room=str(ticket_id), payload={"type": "updated", "ticketId": str(ticket_id), "status": new_status})
-# o por grupo/usuario: room = f"user:{assignee_id}"
