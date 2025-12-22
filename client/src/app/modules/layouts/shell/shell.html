@@ -1,0 +1,38 @@
+<mat-sidenav-container class="app-shell">
+  <mat-sidenav
+    #sidenav
+    class="app-shell-sidenav"
+    mode="side"
+    [(opened)]="opened">
+    <app-sidenav class="app-shell-sidenav-content"></app-sidenav>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="app-shell-main">
+    <mat-toolbar color="primary" class="app-shell-toolbar">
+      <div class="app-shell-toolbar-start">
+        <button
+          mat-icon-button
+          type="button"
+          (click)="sidenav.toggle()"
+          [attr.aria-label]="opened ? 'Ocultar menu' : 'Mostrar menu'">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span class="app-shell-toolbar-title">Dashboard</span>
+      </div>
+
+      <div class="app-shell-toolbar-actions">
+        <button
+          mat-icon-button
+          type="button">
+          <mat-icon>notifications</mat-icon>
+        </button>
+
+      </div>
+
+    </mat-toolbar>
+
+    <section class="app-shell-content">
+      <router-outlet></router-outlet>
+    </section>
+  </mat-sidenav-content>
+</mat-sidenav-container>

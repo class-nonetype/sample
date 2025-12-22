@@ -1,0 +1,43 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+
+.app-form-header, .app-form-footer {
+  height: 150px;
+}
+
+.authentication-tabs {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto 1.25rem;
+  padding: 0 0.75rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.authentication-tabs mat-tab-group {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.authentication-tabs .mat-mdc-tab-header {
+  margin-bottom: 1.25rem;
+}
+
+.authentication-tabs .mat-mdc-tab {
+  flex: 1 1 0;
+  justify-content: center;
+}
+
+.authentication-tabs .mat-mdc-tab-body-wrapper {
+  padding-top: 0;
+}
+
+@media (max-width: 900px) {
+  .authentication-tabs {
+    padding: 0.25rem 0.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+}

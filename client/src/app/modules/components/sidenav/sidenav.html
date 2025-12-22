@@ -1,0 +1,21 @@
+<nav class="app-sidenav">
+  <div class="sidenav-header">
+    <span class="sidenav-brand">GPC</span>
+  </div>
+
+  <div class="sidenav-options">
+    <mat-nav-list>
+      @for (item of navItems; track item.icon) {
+        <a
+          mat-list-item
+          class="sidenav-option"
+          [routerLink]="item.route || null"
+          routerLinkActive="active"
+          (click)="handleClick(item, $event)">
+          <mat-icon matListItemIcon class="sidenav-option-icon">{{ item.icon }}</mat-icon>
+          <span class="sidenav-option-label">{{ item.label }}</span>
+        </a>
+      }
+    </mat-nav-list>
+  </div>
+</nav>

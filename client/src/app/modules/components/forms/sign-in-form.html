@@ -1,0 +1,70 @@
+<section class="sign-in-container">
+  <div class="sign-in-card">
+    <header class="sign-in-header">
+      <h2>Inicia sesión</h2>
+    </header>
+
+    <form class="sign-in-form" [formGroup]="formGroup" (ngSubmit)="submit()" autocomplete="off" novalidate>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Nombre de usuario</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="username"
+          autocomplete="off"
+          required
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Contraseña</mat-label>
+        <input
+          matInput
+          [type]="hide() ? 'password' : 'text'"
+          formControlName="password"
+          autocomplete="off"
+          required
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          type="button"
+          (click)="clickEvent($event)"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide()"
+        >
+          <mat-icon>{{ hide() ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <div class="form-actions">
+        @if (loading()) {
+          <mat-progress-spinner
+            class="sign-in-spinner"
+            diameter="20"
+            strokeWidth="3"
+            mode="indeterminate"
+          />
+        } @else {
+          <button
+            class="app-sign-in-button"
+            mat-flat-button
+            type="submit"
+            [disabled]="formGroup.invalid || loading()"
+          >
+            @if ( formGroup.invalid ) {
+              <mat-icon class="sign-in-lock-icon">lock</mat-icon>
+            } @else {
+              <!-- {{ formGroup.invalid ? 'Completa los campos' : 'Iniciar sesión' }} -->
+              Iniciar sesión
+            }
+
+          </button>
+        }
+      </div>
+    </form>
+  </div>
+
+
+</section>
+

@@ -1,0 +1,21 @@
+<div class="main-layout">
+  <header class="main-layout__header">
+    <!-- navbar, logo, user menu -->
+    <h1>Mi App</h1>
+  </header>
+
+  <div class="main-layout__body">
+    <aside class="main-layout__sidebar">
+      <!-- links, menú lateral -->
+      <nav>
+        <a routerLink="/main" routerLinkActive="active">Inicio</a>
+        <!-- más links -->
+      </nav>
+    </aside>
+
+    <main class="main-layout__content">
+      <!-- Aquí entran las páginas internas -->
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

@@ -1,0 +1,112 @@
+:host {
+  display: block;
+}
+
+.project-tree {
+  width: 100%;
+}
+
+.tree-card {
+  user-select: none;
+  max-width: 640px;
+  margin: 0 auto;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  padding: 10px 12px;
+}
+
+.project-tree-tree {
+  background: transparent;
+  padding: 10px 16px 16px 22px;
+}
+
+.project-tree-tree .mat-tree-node {
+  min-height: 44px;
+  margin-bottom: 6px;
+}
+
+.project-tree-tree .mat-nested-tree-node {
+  padding-left: 4px;
+}
+
+.tree-node {
+  display: grid;
+  grid-template-columns: 32px 26px 1fr;
+  align-items: center;
+  gap: 14px;
+  border-radius: 10px;
+  color: #0f172a;
+  transition: background-color 120ms ease, transform 120ms ease;
+}
+
+.tree-node:hover {
+  background: rgba(15, 23, 42, 0.04);
+}
+
+.tree-toggle,
+.tree-toggle-placeholder {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tree-toggle-placeholder {
+  opacity: 0.25;
+}
+
+.tree-toggle {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  color: #111827;
+  border-radius: 6px;
+  transition: background-color 120ms ease;
+}
+
+.tree-toggle:hover {
+  background: rgba(15, 23, 42, 0.06);
+}
+
+.tree-toggle:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 2px;
+}
+
+.tree-expander {
+  width: 24px;
+  height: 24px;
+  padding-left: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #111827;
+}
+
+.tree-icon.folder {
+  color: #0f5132;
+}
+
+.tree-icon.file {
+  color: #2563eb;
+}
+
+.tree-label {
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  word-break: break-word;
+}
+
+@media (max-width: 640px) {
+  .tree-card {
+    border-radius: 12px;
+  }
+
+  .tree-node {
+    gap: 8px;
+  }
+}

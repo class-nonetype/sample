@@ -1,0 +1,34 @@
+<section class="project-tree">
+  <div class="tree-card">
+    <mat-tree
+      #tree
+      class="project-tree-tree"
+      [dataSource]="dataSource"
+      [childrenAccessor]="childrenAccessor">
+      <!-- Leaf nodes -->
+      <mat-tree-node
+        *matTreeNodeDef="let node"
+        matTreeNodePadding
+        class="tree-node tree-leaf">
+        <span class="tree-toggle-placeholder"></span>
+        <mat-icon class="tree-icon file">description</mat-icon>
+        <span class="tree-label">{{ node.name }}</span>
+      </mat-tree-node>
+
+      <!-- Expandable nodes -->
+      <mat-tree-node
+        *matTreeNodeDef="let node; when: hasChild"
+        matTreeNodePadding
+        matTreeNodeToggle
+        class="tree-node tree-branch"
+        [cdkTreeNodeTypeaheadLabel]="node.name">
+
+        <mat-icon class="tree-expander mat-icon-rtl-mirror">
+          {{ tree.isExpanded(node) ? 'expand_more' : 'chevron_right' }}
+        </mat-icon>
+        <mat-icon class="tree-icon folder mat-icon-rtl-mirror">folder</mat-icon>
+        <span class="tree-label">{{ node.name }}</span>
+      </mat-tree-node>
+    </mat-tree>
+  </div>
+</section>

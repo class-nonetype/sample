@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; margin: 0; }
+body { font-family: Roboto, "Helvetica Neue", sans-serif; overflow: hidden; }
+
+/* Mantener sin scroll global */
+.mat-drawer-content { scrollbar-width: none; -ms-overflow-style: none; }
+.mat-drawer-content::-webkit-scrollbar { display: none; }

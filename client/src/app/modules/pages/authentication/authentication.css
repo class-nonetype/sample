@@ -1,0 +1,83 @@
+.authentication-page {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.authentication-banner {
+  flex: 1;
+
+  background: #1D2B64;
+  background: -webkit-linear-gradient(to right, #F8CDDA, #1D2B64);
+  background: linear-gradient(to right, #F8CDDA, #1D2B64);
+
+
+
+  background: #CC95C0;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background: #1F1C2C;
+  background: -webkit-linear-gradient(to right, #928DAB, #1F1C2C);
+  background: linear-gradient(to right, #928DAB, #1F1C2C);
+
+
+
+  position: relative;
+  min-height: 240px;
+  border-right: 1px solid #e0e0e0;
+  width: 50%;
+}
+
+/*
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: transparent;
+  backdrop-filter: none;
+}
+
+.hero-overlay h1 {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+}
+
+.hero-overlay p {
+  margin: 0;
+  max-width: 320px;
+}
+*/
+
+.authentication-tab-group {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem 1.5rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .authentication-page {
+    flex-direction: column;
+  }
+
+  .authentication-banner {
+    display: none;
+    width: 0;
+    min-height: 0;
+  }
+
+  .authentication-tab-group {
+    padding: 1.25rem 1rem 2rem;
+  }
+}
