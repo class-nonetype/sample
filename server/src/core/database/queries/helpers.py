@@ -7,9 +7,7 @@ from src.core.database.models import *
 
 async def insert_object_model(
     session: AsyncSession,
-    base_model: (UserAccounts
-                 | UserProfiles
-                 | UserGroups),
+    base_model: (UserAccounts | UserProfiles | UserGroups),
     data_model: dict
 ):
     object_model = base_model(**data_model)

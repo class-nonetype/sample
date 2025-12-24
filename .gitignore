@@ -20,6 +20,7 @@
 /server/.mypy_cache/
 /server/.ruff_cache/
 /server/.coverage
+/server/static/
 /server/htmlcov/
 /server/.tox/
 *.py[cod]
